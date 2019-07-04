@@ -1,0 +1,307 @@
+body {
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+    scroll-behavior: smooth;
+}
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+h1 {
+    display: none;
+}
+
+/* --------- header ----------- */
+.page-header {
+    z-index: 10;
+}
+    /* ---------- hero ------------ */
+    .page-header .hero-image {
+        z-index: 0;
+        width: 100%;
+        height: 800px;
+        background: url('../img/hero.jpg') no-repeat fixed;
+        background-position: center 80%;
+        background-size: cover;
+    }
+    .page-header .hero {
+        z-index: 5;
+        margin-top: -800px;
+        width: 100%;
+        height: 800px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        background: rgba(0, 0, 0, 0.4);
+    }
+    
+    .hero .hero-content {
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 30%;
+        background: rgba(0, 0, 0, 0.6);
+    }
+    
+    .hero-content .hero-title {
+        margin-bottom: 10px;
+        font-size: 50px;
+        color: #ffffff;
+        font-weight: 700;
+    }
+    
+    .hero-content .hero-subtitle {
+        margin-left: 140px;
+        font-size: 20px;
+        color: rgba(255, 255, 255, 0.7);
+        font-weight: 700;
+    }
+    
+    /* ---------- header-container ------------ */
+    .page-header .header-container {
+        z-index: 10;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 50px;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.7);
+        transition: 0.3s ease-out;
+    }
+
+    .page-header .white {
+        background:#ffffff;
+    }
+
+    .header-container .header-title {
+        margin-left: 30px;
+        font-size: 25px;
+        color: #ffffff;
+        font-weight: 700;
+    }
+
+    .white .header-title {
+        color: #000000;
+    }
+
+    .header-container .header-nav {
+        display: flex;
+        margin-right: 50px;
+    }
+
+    .header-container .header-nav a {
+        position: relative;
+        margin-right: 20px;
+        font-size: 18px;
+        color: #ffffff;
+        text-decoration: none;
+    }
+
+    .white .header-nav a {
+        color: #000000;
+    }
+
+    .header-container .header-nav a::after {
+        position: absolute;
+        left: 50%;
+        bottom: -3px;
+        display: block;
+        content: '';
+        height: 2px;
+        width: 0;
+        background: #ffffff;
+        transition: 0.2s;
+        transform: translateX(-50%);
+    }
+
+    .white .header-nav a::after {
+        background: #000000;
+    }
+
+    .header-container .header-nav a:hover::after {
+        position: absolute;
+        left: 50%;
+        bottom: -3px;
+        display: block;
+        content: '';
+        height: 2px;
+        width: 100%;
+        background: #ffffff;
+        transform: translateX(-50%);
+    }
+
+    .white .header-nav a:hover::after {
+        background: #000000;
+    }
+/* --------- main ----------- */
+    /* ---------- portfolio ------------ */
+    .portfolio {
+        display: flex;
+        padding-top: 100px;
+    }
+
+    .portfolio-container {
+        width: 70%;
+        margin: 0 40px;
+    }
+
+    .portfolio-container .portfolio-title {
+        display: flex;
+        margin-top: 50px;
+        margin-left: 20%;
+        font-size: 50px;
+        color: #000000;
+        font-weight: 900;
+        text-transform: uppercase;
+    }
+
+    .portfolio-title .pointer {
+        display: block;
+        margin-left: 10px;
+        width: 6px;
+        height: 50px;
+        background: rgba(0, 0, 0, 1);
+        opacity: 0;
+        animation-name: portfolio-pointer;
+        animation-duration: 0.7s;
+        animation-iteration-count: infinite;
+    }
+
+    @keyframes portfolio-pointer {
+        0% {
+            opacity: 0;
+        }
+
+        60% {
+            opacity: 0.75;
+        }
+
+        80% {
+            opacity: 100;
+        }
+
+        100% {
+            opacity: 0.25;
+        }
+    }
+
+    .portfolio-container .cards-container {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 50px;
+    }
+
+    .portfolio-container .cards-container .column {
+        display: flex;
+        flex-direction: column;
+        width: 45%;
+    }
+
+    .cards-container .column .card {
+        width: 100%;
+        margin-bottom: 40px;
+        text-decoration: none;
+        background: grey;
+        box-shadow: 3px -3px 20px -10px #000000;
+    }
+
+    .cards-container .column .hexal {
+        background: url('../img//works/hexal.jpg') top center no-repeat;
+        background-size: cover;  
+    }
+
+    .cards-container .column .neutronmail {
+        background: url('../img//works/neutronmail.jpg') top center no-repeat;
+        background-size: cover;  
+    }
+
+    .cards-container .column .piskel-clone {
+        background: url('../img//works/piskel-clone.png') top center no-repeat;
+        background-size: cover;  
+    }
+
+    .cards-container .column .youtube {
+        background: url('../img//works/youtube.png') top center no-repeat;
+        background-size: cover;  
+    }
+
+    .cards-container .left-column .card {
+        height: 250px;
+    }
+
+    .cards-container .right-column .card {
+        height: 400px;
+    }
+
+    .column .card .card-cover {
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-start;
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.9);
+        opacity: 0;
+        transition: 0.1s ease-out;
+    }
+
+    .column .card:hover .card-cover {
+       opacity: 1;
+    }
+
+    .column .card .card-content {
+        padding: 50px;
+    }
+
+    .column .card .card-title {
+        margin-bottom: 15px;
+        font-size: 40px;
+        color: #000000;
+        font-weight: 700;
+    }
+
+    .column .card .card-description {
+        font-size: 18px;
+        color: rgba(0, 0, 0, 0.5);
+        font-weight: 200;
+    }
+    .portfolio-parallax {
+        z-index: 1;
+        position: relative;
+        width: 30%;
+        height: 1000px;
+        background: rgba(0, 0, 0, 0.1);
+    }
+
+    .portfolio-parallax .parallax-1 {
+        z-index: 2;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: url('../img/parallax/parallax-1.png') no-repeat;
+        background-size: 300%;
+        background-position: 50% 50%;
+    }
+
+    .portfolio-parallax .parallax-2 {
+        z-index: 3;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: url('../img/parallax/parallax-2.png') no-repeat;
+        background-size: 250%;
+        background-position: 50% 50%;
+    }
+
+
+
+    footer {
+        height: 1000px;
+    }
+
