@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
+    <link rel="stylesheet" href="assets/fonts/fontawesome-free-5.9.0-web/css/all.css">
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700,900&display=swap&subset=cyrillic"
@@ -18,7 +19,7 @@
     <header class="page-header">
         <div class="container">
             <div class="hero-image"></div>
-            <div class="hero">
+            <div class="hero" id="hero">
                 <div class="hero-content">
                     <h3 class="hero-title">Василий Гриб</h3>
                     <h4 class="hero-subtitle">Front-end developer</h4>
@@ -26,11 +27,13 @@
             </div>
 
             <div class="header-container white">
-                <h4 class="header-title">Василий Гриб</h4>
+                <a href="#hero">
+                    <h4 class="header-title">Василий Гриб</h4>
+                </a>
                 <nav class="header-nav">
-                    <a href="#">Обо мне</a>
+                    <a href="#about-me">Обо мне</a>
                     <a href="#portfolio">Мои работы</a>
-                    <a href="#">Контакты</a>
+                    <a href="#contacts">Контакты</a>
                 </nav>
             </div>
         </div>
@@ -40,7 +43,7 @@
         <div class="container">
             <h1>Василий Гриб</h1>
 
-            <div class="portfolio" id="portfolio">
+            <section class="portfolio" id="portfolio">
                 <div class="portfolio-container">
                     <h2 class="portfolio-title">My works <span class="pointer"></span></h2>
                     <div class="cards-container">
@@ -86,11 +89,45 @@
                         </div>
                     </div>
                 </div>
-                <div class="portfolio-parallax">
+                <article class="portfolio-parallax">
                     <div class="parallax-1"></div>
                     <div class="parallax-2"></div>
+                </article>
+            </section>
+
+            <section class="about-me">
+                <div class="about-me-image"></div>
+
+                <article class="about-me-content" id="about-me">
+                    <div class="about-me-content-container">
+                        <h2 class="about-me-title">About me <span class="pointer"></span></h2>
+                        <p class="about-me-text">
+                            Студент 2-го курса БГУИР по специальности АСОИ (ФИТУ). Уже почти год изучаю Front-end и всё,
+                            что с ним связано. Подхожу к окончанию курсов по JavaScript
+                            от <a href="https://rollingscopes.com/" target="_blank">The Rolling Scopes</a>. С учебными
+                            проектами вы можете ознакомиться в моём <a href="#portfolio">портфолио</a>
+                            Хорошо знаком с HTML, CSS, JavaScript. Умею работать с системами контроля версий (GIT).
+                            Знаком с webpack. Английский уровня B1.
+                        </p>
+                    </div>
+                </article>
+            </section>
+
+            <section class="contacts" id="contacts">
+                <h3 class="contacts-title">Contacts</h3>
+                <div class="contacts-content">
+                    <div class="social">
+                        <a href="https://github.com/TuTejsy" class="github" target="_blank"><i
+                                class="fab fa-github"></i></a>
+                        <a href="https://vk.com/vasiliy_grib" class="vk" target="_blank"><i class="fab fa-vk"></i></a>
+                        <a href="https://t.me/grib_vasiliy" class="telegram" target="_blank"><i
+                                class="fab fa-telegram"></i></a>
+                    </div>
+                    <span class="phone-number">phone: <a href="tel:+375445510738">+375445510738</a></span>
+                    <span class="email">email: <a
+                            href="mailto:1111kaktus1111@gmail.com">1111kaktus1111@gmail.com</a></span>
                 </div>
-            </div>
+            </section>
         </div>
     </main>
 
