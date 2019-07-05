@@ -25,7 +25,14 @@ h1 {
         height: 800px;
         background: url('../img/hero.jpg') no-repeat fixed;
         background-position: 75% center;
-        background-size: cover;
+        -webkit-background-size: 100%; 
+        -moz-background-size: 100%; 
+        -o-background-size: 100%; 
+        background-size: 100%; 
+        -webkit-background-size: cover; 
+        -moz-background-size: cover; 
+        -o-background-size: cover; 
+        background-size: cover; 
     }
     .page-header .hero {
         z-index: 5;
@@ -304,7 +311,14 @@ h1 {
         height: 800px;
         background: url('../img/about-me.jpg') no-repeat fixed;
         background-position: 80% center;
-        background-size: cover;
+        -webkit-background-size: 100%; 
+        -moz-background-size: 100%; 
+        -o-background-size: 100%; 
+         background-size: 100%; 
+        -webkit-background-size: cover; 
+        -moz-background-size: cover; 
+        -o-background-size: cover; 
+        background-size: cover; 
     }
 
     .about-me .about-me-content {
