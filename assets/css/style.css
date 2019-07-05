@@ -546,6 +546,9 @@ h1 {
 }
 
 @media only screen and (max-width: 620px) {
+    .page-header .hero-image {
+        background-attachment: scroll;
+    }
     .header-container .header-title {
         margin-left: 10px;
     }
@@ -560,6 +563,10 @@ h1 {
     .portfolio-container .portfolio-title {
         margin-left: 0;
         justify-content: center;
+    }
+
+    .about-me .about-me-image {
+        background-attachment: scroll;
     }
 
     .about-me .about-me-content-container {
