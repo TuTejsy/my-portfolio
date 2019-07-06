@@ -59,29 +59,9 @@ function addParallax() {
     document.addEventListener('touchmove', parallaxEvent);
 }
 
-function scrollAnimation() {
-    const anchors = document.querySelectorAll('a[href*="#"]')
-
-    const scroll = anchor => (e) => {
-        e.preventDefault()
-
-        const blockID = anchor.getAttribute('href')
-
-        document.querySelector('' + blockID).scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-        })
-    }
-    for (let anchor of anchors) {
-        anchor.addEventListener('click', scroll(anchor));
-
-    }
-}
-
 function main() {
     addOnScreenEvent();
     addParallax();
-    // scrollAnimation();
 
     const scroll = new SmoothScroll('a[href*="#"]', {
         speed: 500
