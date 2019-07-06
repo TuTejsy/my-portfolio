@@ -1,8 +1,8 @@
 function addOnScreenEvent() {
     const pageHeaderContainer = document.querySelector('.page-header .header-container');
-    const headerOffSetTop = pageHeaderContainer.offsetTop;
+    let headerOffSetTop = pageHeaderContainer.offsetTop;
     const aboutMe = document.querySelector('.about-me');
-    const aboutMeOffSetTop = aboutMe.offsetTop;
+    let aboutMeOffSetTop = aboutMe.offsetTop;
     let isTransform = true;
 
     const onScreenEvent = () => {
@@ -44,41 +44,48 @@ function addParallax() {
     }
 
     const parallaxEvent = (e) => {
-
+        const ev = e.changedTouches ? e.changedTouches[0] : e;
         parallax1.style.animationDuration = '0s';
-        parallax1.style.backgroundPositionX = `calc(50% + ${(middleX - e.clientX) / 10}px)`;
-        parallax1.style.backgroundPositionY = `calc(50% + ${(middleY - e.clientY) / 10}px)`;
+        parallax1.style.backgroundPositionX = `calc(50% + ${(middleX - ev.clientX) / 10}px)`;
+        parallax1.style.backgroundPositionY = `calc(50% + ${(middleY - ev.clientY) / 10}px)`;
 
 
-        parallax2.style.backgroundPositionX = `calc(50% + ${(middleX - e.clientX) / 25}px)`;
-        parallax2.style.backgroundPositionY = `calc(50% + ${(middleY - e.clientY) / 25}px)`;
+        parallax2.style.backgroundPositionX = `calc(50% + ${(middleX - ev.clientX) / 25}px)`;
+        parallax2.style.backgroundPositionY = `calc(50% + ${(middleY - ev.clientY) / 25}px)`;
     }
 
     document.addEventListener('resize', resizeEvent);
     document.addEventListener('mousemove', parallaxEvent);
+    document.addEventListener('touchmove', parallaxEvent);
 }
 
 function scrollAnimation() {
     const anchors = document.querySelectorAll('a[href*="#"]')
 
-    for (let anchor of anchors) {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault()
+    const scroll = anchor => (e) => {
+        e.preventDefault()
 
-            const blockID = anchor.getAttribute('href')
+        const blockID = anchor.getAttribute('href')
 
-            document.querySelector('' + blockID).scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            })
+        document.querySelector('' + blockID).scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
         })
+    }
+    for (let anchor of anchors) {
+        anchor.addEventListener('click', scroll(anchor));
+
     }
 }
 
 function main() {
     addOnScreenEvent();
     addParallax();
-    scrollAnimation();
+    // scrollAnimation();
+
+    const scroll = new SmoothScroll('a[href*="#"]', {
+        speed: 500
+    });
 }
 
 main();

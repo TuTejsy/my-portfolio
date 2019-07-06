@@ -1,7 +1,7 @@
 body {
     position: relative;
     font-family: 'Roboto', sans-serif;
-    scroll-behavior: smooth;
+    /* scroll-behavior: smooth; */
 }
 
 .container {
@@ -14,16 +14,13 @@ h1 {
 }
 
 /* --------- header ----------- */
-.page-header {
-    z-index: 10;
-}
     /* ---------- hero ------------ */
     .page-header .hero-image {
         z-index: 0;
         width: 100%;
         min-width: 100%;
         height: 800px;
-        background: url('../img/hero.jpg') fixed;
+        background: url('../img/hero.jpg') no-repeat fixed;
         background-position: 75% center;
         -webkit-background-size: 100%; 
         -moz-background-size: 100%; 
@@ -32,7 +29,7 @@ h1 {
         -webkit-background-size: cover; 
         -moz-background-size: cover; 
         -o-background-size: cover; 
-        background-size: cover; 
+        background-size: cover;
     }
     .page-header .hero {
         z-index: 5;
@@ -546,9 +543,6 @@ h1 {
 }
 
 @media only screen and (max-width: 620px) {
-    .page-header .hero-image {
-        background-attachment: scroll;
-    }
     .header-container .header-title {
         margin-left: 10px;
     }
@@ -565,10 +559,6 @@ h1 {
         justify-content: center;
     }
 
-    .about-me .about-me-image {
-        background-attachment: scroll;
-    }
-
     .about-me .about-me-content-container {
         align-items: center;
     }
@@ -583,6 +573,10 @@ h1 {
 }
 
 @media only screen and (max-width: 530px) {
+    .page-header .hero-image {
+        background-attachment: scroll;
+    }
+
     .portfolio-container .cards-container {
         display: flex;
         flex-direction: column;
@@ -596,6 +590,10 @@ h1 {
     .portfolio-container .cards-container .column .card {
         margin-bottom: 40px;
         height: 300px;
+    }
+
+    .about-me .about-me-image {
+        background-attachment: scroll;
     }
 }
 
