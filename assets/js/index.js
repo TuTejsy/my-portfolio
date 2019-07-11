@@ -45,10 +45,8 @@ function addParallax() {
 
     const parallaxEvent = (e) => {
         const ev = e.changedTouches ? e.changedTouches[0] : e;
-        parallax1.style.animationDuration = '0s';
         parallax1.style.backgroundPositionX = `calc(50% + ${(middleX - ev.clientX) / 10}px)`;
         parallax1.style.backgroundPositionY = `calc(50% + ${(middleY - ev.clientY) / 10}px)`;
-
 
         parallax2.style.backgroundPositionX = `calc(50% + ${(middleX - ev.clientX) / 25}px)`;
         parallax2.style.backgroundPositionY = `calc(50% + ${(middleY - ev.clientY) / 25}px)`;

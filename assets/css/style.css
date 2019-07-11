@@ -4,7 +4,7 @@ body {
 }
 
 .container {
-    max-width: 1440px;
+    max-width: 1920px;
     margin: 0 auto;
 }
 
@@ -74,6 +74,7 @@ h1 {
         justify-content: space-between;
         height: 50px;
         width: 100%;
+        max-width: 1920px;
         background: rgba(0, 0, 0, 0.7);
         transition: 0.3s ease-out;
     }
