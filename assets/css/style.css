@@ -60,10 +60,22 @@ h1 {
     }
     
     .hero-content .hero-subtitle {
-        margin-left: 140px;
+        margin-left: 70px;
         font-size: 20px;
         color: rgba(255, 255, 255, 0.7);
         font-weight: 700;
+        text-align: start;
+        line-height: 25px;
+    }
+
+    .hero-content .hero-subtitle a {
+        font-size: 18px;
+        color: rgba(255, 255, 255, 0.7);
+        text-decoration: none;
+    }
+
+    .hero-content .hero-subtitle a:hover {
+        color: #FFF;
     }
     
     /* ---------- header-container ------------ */
@@ -417,6 +429,10 @@ h1 {
         color: rgba(0, 0, 0, 0.4);
     }
 
+    .contacts-content .social a:last-child {
+        margin-right: 0;
+    }
+
     .contacts-content a:hover {
         transition: 0.2s;
     }
@@ -431,6 +447,10 @@ h1 {
 
     .contacts-content .social .telegram:hover {
         color: #0088cc;
+    }
+
+    .contacts-content .social .linkedIn:hover {
+        color: #2867B2;
     }
     
     .contacts-content a {
