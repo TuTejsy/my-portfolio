@@ -4,7 +4,7 @@ body {
 }
 
 .container {
-    max-width: 1920px;
+    max-width: 2560px;
     margin: 0 auto;
 }
 
@@ -86,7 +86,7 @@ h1 {
         justify-content: space-between;
         height: 50px;
         width: 100%;
-        max-width: 1920px;
+        max-width: 2560px;
         background: rgba(0, 0, 0, 0.7);
         transition: 0.3s ease-out;
     }
@@ -226,6 +226,11 @@ h1 {
         background-size: cover;  
     }
 
+    .cards-container .column .bsuir-schedule {
+        background: url('../img//works/BSUIR.png') bottom center no-repeat;
+        background-size: cover;  
+    }
+
     .cards-container .column .piskel-clone {
         background: url('../img//works/piskel-clone.png') top center no-repeat;
         background-size: cover;  
@@ -237,11 +242,11 @@ h1 {
     }
 
     .cards-container .left-column .card {
-        height: 250px;
+        height: 500px;
     }
 
     .cards-container .right-column .card {
-        height: 400px;
+        height: 750px;
     }
 
     .column .card .card-cover {
@@ -374,7 +379,7 @@ h1 {
     }
     
     .about-me .about-me-text {
-        max-width: 1000px;
+        max-width: 1500px;
         margin-left: 20%;
         font-size: 16px;
         color: rgba(255, 255, 255, 0.4);
@@ -500,6 +505,16 @@ h1 {
 }
 
 /* ------adaptive------- */
+
+@media only screen and (max-width: 1900px) {
+    .cards-container .left-column .card {
+        height: 250px;
+    }
+
+    .cards-container .right-column .card {
+        height: 400px;
+    }
+}
 
 @media only screen and (max-width: 1080px) {
     .portfolio-container .cards-container .column {
